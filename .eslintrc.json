@@ -18,6 +18,8 @@
         "namedComponents": "arrow-function",
         "unnamedComponents": "arrow-function"
       }
-    ]
+    ],
+    "no-restricted-exports": 0,
+    "arrow-body-style": 0
   }
 }
