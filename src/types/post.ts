@@ -6,6 +6,7 @@ interface Post {
   slug: string;
   author: Author;
   content: string;
+  excerpt: string;
 }
 
 export default Post;

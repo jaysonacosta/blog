@@ -1,8 +1,8 @@
 ---
-title: "This is my first post!"
+title: "This is my second post!"
 author:
   name: Jayson Acosta
 excerpt: "This is the excerpt! Some kind of summary I guess."
 ---
 
-Welcome to my first post!
+Welcome to my second post!

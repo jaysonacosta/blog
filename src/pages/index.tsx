@@ -20,14 +20,21 @@ const Home: NextPage<HomeProps> = (props: HomeProps) => {
       <p className="text-3xl pb-5">Welcome! 🔥👋</p>
       {allPosts &&
         allPosts.map((post) => {
-          return <Post key={post.slug} title={post.slug} />;
+          return (
+            <Post
+              key={post.slug}
+              title={post.title}
+              slug={post.slug}
+              excerpt={post.excerpt}
+            />
+          );
         })}
     </Layout>
   );
 };
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(["title", "slug", "author"]);
+  const allPosts = getAllPosts(["title", "slug", "author", "excerpt"]);
 
   return {
     props: {
