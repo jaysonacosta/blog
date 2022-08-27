@@ -16,7 +16,9 @@ const Home: NextPage<HomeProps> = (props: HomeProps) => {
 
   return (
     <>
-      <Layout>Home</Layout>
+      <Layout>
+        <p className="text-3xl">Welcome! 🔥👋</p>
+      </Layout>
       {allPosts &&
         allPosts.map((post) => {
           return <p key={post.slug}>{post.slug}</p>;
