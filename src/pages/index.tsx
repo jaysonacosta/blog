@@ -1,29 +1,28 @@
 import React from "react";
 import type { NextPage } from "next";
 
-import Post from "types/post";
+import PostType from "types/post";
 
 import Layout from "@components/Layout";
+import Post from "@components/Post";
 
 import getAllPosts from "lib/posts";
 
 type HomeProps = {
-  allPosts: Post[];
+  allPosts: PostType[];
 };
 
 const Home: NextPage<HomeProps> = (props: HomeProps) => {
   const { allPosts } = props;
 
   return (
-    <>
-      <Layout>
-        <p className="text-3xl">Welcome! 🔥👋</p>
-      </Layout>
+    <Layout>
+      <p className="text-3xl pb-5">Welcome! 🔥👋</p>
       {allPosts &&
         allPosts.map((post) => {
-          return <p key={post.slug}>{post.slug}</p>;
+          return <Post key={post.slug} title={post.slug} />;
         })}
-    </>
+    </Layout>
   );
 };
 
