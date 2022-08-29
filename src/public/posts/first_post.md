@@ -3,7 +3,14 @@ title: "This is my first post!"
 author:
   name: Jayson Acosta
 excerpt: "Magna officia magna velit sit irure quis excepteur aliquip quis aliqua cupidatat qui. Do sunt ad quis ex pariatur laboris ad nisi mollit adipisicing. Lorem laboris tempor adipisicing aute ut."
+date: 2022-08-29T15:19:14Z
 ---
+
+# _You're Doing Something Wrong_
+
+## How to fix it!
+
+### 🔥😈
 
 Consectetur Lorem culpa adipisicing fugiat excepteur ipsum culpa quis quis et eu. Cillum eu sunt incididunt consequat eu nostrud ullamco deserunt. Ullamco magna amet nisi enim consequat esse voluptate sunt ad deserunt. Cupidatat magna excepteur magna fugiat consequat eiusmod. Ea ullamco nisi consequat laborum nisi nostrud magna ea magna adipisicing aliqua.
 

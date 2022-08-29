@@ -24,7 +24,9 @@ const Home: NextPage<HomeProps> = (props: HomeProps) => {
       <Layout>
         <section className="grid grid-cols-2 gap-16 w-full">
           <div>
-            <h1 className="text-2xl pb-5 text-slate-200">Recently Published</h1>
+            <h1 className="text-2xl pb-5 dark:text-slate-200">
+              Recently Published
+            </h1>
             {allPosts.map((post) => {
               return (
                 <Post
@@ -37,7 +39,9 @@ const Home: NextPage<HomeProps> = (props: HomeProps) => {
             })}
           </div>
           <div>
-            <h2 className="text-2xl pb-5 text-slate-200">Popular Content</h2>
+            <h2 className="text-2xl pb-5 dark:text-slate-200">
+              Popular Content
+            </h2>
           </div>
         </section>
       </Layout>
