@@ -2,18 +2,20 @@ import React from "react";
 import type { NextPage } from "next";
 
 import Layout from "@components/Layout";
-import getAllPosts, { getPostBySlug, type Items } from "lib/posts";
+import getAllPosts, { getPostBySlug } from "lib/posts";
+import markdownToHtml from "lib/markdownToHtml";
 
 type Props = {
-  post: Items;
+  title: string;
+  content: string;
 };
 
-const Post: NextPage<Props> = ({ post }: Props) => {
+const Post: NextPage<Props> = ({ title, content }: Props) => {
   return (
     <Layout>
-      <h1 className="text-3xl pb-5">{post.title}</h1>
-      <section>
-        <p>{post.content}</p>
+      <h1 className="text-3xl pb-5">{title}</h1>
+      <section className="px-16 leading-relaxed text-lg">
+        <p dangerouslySetInnerHTML={{ __html: content }} />
       </section>
     </Layout>
   );
@@ -28,10 +30,12 @@ type Params = {
 export const getStaticProps = async ({ params }: Params) => {
   const { slug } = params;
   const post = getPostBySlug(`${slug}.md`, ["title", "content"]);
+  const content = await markdownToHtml(post.content);
 
   return {
     props: {
-      post,
+      ...post,
+      content,
     },
   };
 };

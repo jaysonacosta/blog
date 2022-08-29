@@ -20,7 +20,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <li className="p-2 select-none cursor-pointer">About</li>
         </ul>
       </nav>
-      <main className="p-5 flex flex-col items-center">{children}</main>
+      <main className="p-5 flex flex-col items-center px-16">{children}</main>
     </>
   );
 };
