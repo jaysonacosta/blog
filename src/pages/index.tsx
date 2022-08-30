@@ -9,11 +9,11 @@ import Post from "@components/Post";
 
 import getAllPosts from "lib/posts";
 
-type HomeProps = {
+type Props = {
   allPosts: PostType[];
 };
 
-const Home: NextPage<HomeProps> = (props: HomeProps) => {
+const Home: NextPage<Props> = (props: Props) => {
   const { allPosts } = props;
 
   return (
@@ -22,11 +22,9 @@ const Home: NextPage<HomeProps> = (props: HomeProps) => {
         <title>Jayson Acosta</title>
       </Head>
       <Layout>
-        <section className="grid grid-cols-2 gap-16 w-full">
-          <div>
-            <h1 className="text-2xl pb-5 dark:text-slate-200">
-              Recently Published
-            </h1>
+        <section>
+          <div className="flex flex-col gap-y-4">
+            <h1 className="text-2xl dark:text-slate-200">Recently Published</h1>
             {allPosts.map((post) => {
               return (
                 <Post
@@ -38,19 +36,14 @@ const Home: NextPage<HomeProps> = (props: HomeProps) => {
               );
             })}
           </div>
-          <div>
-            <h2 className="text-2xl pb-5 dark:text-slate-200">
-              Popular Content
-            </h2>
-          </div>
         </section>
       </Layout>
     </>
   );
 };
 
-export const getStaticProps = async () => {
-  const allPosts = getAllPosts(["title", "slug", "author", "excerpt"]);
+export const getStaticProps = () => {
+  const allPosts = getAllPosts(["title", "slug", "excerpt"]);
 
   return {
     props: {
