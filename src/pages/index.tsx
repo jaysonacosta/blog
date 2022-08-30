@@ -23,7 +23,7 @@ const Home: NextPage<Props> = (props: Props) => {
       </Head>
       <Layout>
         <section>
-          <div className="flex flex-col gap-y-4">
+          <div className="flex flex-col gap-y-4 container mx-auto">
             <h1 className="text-2xl dark:text-slate-200">Recently Published</h1>
             {allPosts.map((post) => {
               return (

@@ -50,7 +50,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </Link>
         </ul>
       </nav>
-      <main className="p-5 flex flex-col px-16">{children}</main>
+      <main className="p-5 flex flex-col">{children}</main>
     </>
   );
 };

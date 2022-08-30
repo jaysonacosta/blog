@@ -23,9 +23,9 @@ const Posts: NextPage<Props> = (props: Props) => {
         <title>Posts</title>
       </Head>
       <Layout>
-        <section className="flex flex-col gap-y-4">
+        <section className="flex flex-col gap-y-4 container mx-auto">
           <h1 className="text-2xl dark:text-slate-200">All Posts</h1>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid gap-4 lg:grid-cols-2">
             {allPosts.map((post) => {
               return (
                 <Post
